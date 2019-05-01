@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "878983e2-3fbb-4326-93b5-2230b99858b2",
+		"name": "sat10am bbs",
+		"description": "Example of REST API with [Slim PHP micro framework](http://www.slimframework.com).\n\nThis simple RESTful API made in Slim version 3, allows CRUD operations to manage entities like: Users, Tasks and Notes :-)\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Info",
+			"item": [
+				{
+					"name": "Get Help",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4f2c6ef-9ea3-4969-95a4-c8af96ac93a1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public"
+							]
+						},
+						"description": "Get help about this api."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b73cea97-407f-4cd1-8941-dfe2fe7f7a74",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/status",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"status"
+							]
+						},
+						"description": "Get status of this api."
+					},
+					"response": []
+				}
+			],
+			"description": "Get information about API."
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bbed56e5-73f5-484c-8019-7b7f8de73c15",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test_user_01@gmail.com\",\n    \"password\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/login",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"login"
+							]
+						},
+						"description": "Login and get a JWT Token Authorization Bearer to use this api."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c99e2f66-7cb0-41c1-ab55-dd3e0c40ebd8",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "288fa75c-ac90-4bf1-81b6-543011be275f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "de759f84-9479-4420-994d-77d4d47581f2",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users/search/d",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users",
+								"search",
+								"d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "64d18093-0d32-4e6e-9d47-fcf14c53e5a4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"testUser01\",\n  \"email\": \"test_user_01@gmail.com\",\n  \"password\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7766da2d-190b-49e5-8fc6-615095b7cf3e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": 123,\n  \"email\": \"cr7@asd.com.ar\"\n}"
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users/4",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e476d6d7-27e8-415e-86f4-295ccabcbede",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY3MDEzODQsImV4cCI6MTU1NzMwNjE4NH0.8pAPakJEsB8vME6KqCaUqLjzXxOQJOuvzEZ9FskIQLc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Manage Users."
+		},
+		{
+			"name": "Boards",
+			"item": [
+				{
+					"name": "Get All Boards",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3c909b9a-3b09-40e4-ac19-2cb0e8996922",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY3MDEzODQsImV4cCI6MTU1NzMwNjE4NH0.8pAPakJEsB8vME6KqCaUqLjzXxOQJOuvzEZ9FskIQLc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0f840dae-5fad-41c6-b00b-e4783239d31f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards/14",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f825830a-b3ad-474a-9f5f-b619a8db6b6c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards/search/_",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards",
+								"search",
+								"_"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a2a71af4-c56e-43b3-aeea-f651a4c45a98",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY3MDQ5MDMsImV4cCI6MTU1NzMwOTcwM30.EMApNGo9qFv3FX3_WT4ALSIZ8vOmVv1sSfT4f7xIo40",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Javascript: Generator\",\n  \"description\": \"You Don't Know JS (this와 객체 프로토타입, 비동기와 성능)\",\n  \"imageUrl\": \"https://s3.amazonaws.com/media-p.slid.es/thumbnails/79122daa746d2ef89fb824060821a3ea/thumb.jpg\",\n  \"slideUrl\": \"https://slides.com/wooddy/generator\"\n}"
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "625768b8-f6ab-4318-8a95-9516a7933aeb",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"update\",\n  \"description\": \"update\"\n}"
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards/4",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ddd7e5e1-3adc-41b9-9f7a-e19d61c5572e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJ0ZXN0X3VzZXJfMDFAZ21haWwuY29tIiwibmFtZSI6InRlc3RVc2VyMDEiLCJpYXQiOjE1NTY2OTgwNTksImV4cCI6MTU1NzMwMjg1OX0.dv2D25ecWe1c-oDI1cDukxAXvNazTelTnKBZ49B-WGU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wodn4131.cafe24.com/sat10am/public/api/v1/boards/15",
+							"protocol": "http",
+							"host": [
+								"wodn4131",
+								"cafe24",
+								"com"
+							],
+							"path": [
+								"sat10am",
+								"public",
+								"api",
+								"v1",
+								"boards",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Manage Notes.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7901c35c-ee3f-4288-905a-62a86c5d0d9d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "00ab18e8-6925-4bc0-b539-e2afabb506f8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cf9937b7-72e5-4bd7-b1f4-b80a11d08710",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "da85b75f-b8f7-41b2-a63b-0a9d5aa67da2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
